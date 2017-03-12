@@ -1,0 +1,93 @@
+body {
+  padding:0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+body * {
+  padding:0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.header {
+  text-align: center;
+  color:white;
+}
+.header p {
+  display: inline-block;
+  margin-top: 20vh;
+  font-size: 7vw;
+}
+.header img {
+  position: absolute;
+  bottom:0px;
+  left:50%;
+  width: 30vmax;
+  height: auto;
+  transform: translateX(-50%);
+
+}
+
+.background-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+ 	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+ 	height: 95vh;
+	transition: opacity 2s ease-in-out;
+}
+
+/* Styles for the specific images. */
+.first-image {
+	background-image: url('./../assets/img/header-bg/1.jpg');
+	z-index: -3;
+	opacity: 0;
+}
+
+.second-image {
+	background-image: url('./../assets/img/header-bg/2.jpg');
+	z-index: -2;
+	opacity: 0;
+}
+
+.third-image {
+	background-image: url('./../assets/img/header-bg/3.jpg');
+	z-index: -1;
+	opacity: 0;
+}
+
+.first-image.show {
+	opacity: 1;
+}
+
+.second-image.show {
+	opacity: 1;
+}
+
+.third-image.show {
+	opacity: 1;
+}
+
+
+
+/*
+.header {
+  height: 100vh;
+  width: auto;
+  background-image: url('./../assets/img/header-bg/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.header p {
+  margin-top: 20vh;
+  font-size: 8vw;
+  display: inline-block;
+}
+*/
