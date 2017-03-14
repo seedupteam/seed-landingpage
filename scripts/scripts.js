@@ -19,21 +19,25 @@ $(function () {
   cycleBackgrounds();
 });
 
-
+var animating = false;
 $(window).scroll(function() {
-  if($(window).scrollTop() + $(window).height() > $(document).height() - 5) {
-    var div = $(".innner");
-    div.animate({height: '+=4vh', opacity: '1'}, 500);
-    div.animate({height: '-=4vh', opacity: '1'}, 600);
-    // div.animate({width: '300px', opacity: '0.8'}, "slow");
-    // div.animate({height: '100px', opacity: '0.4'}, "slow");
-    // div.animate({width: '100px', opacity: '0.8'}, "slow");
+  if(!animating && $(window).scrollTop() + $(window).height() > $(document).height() - 5) {
+    animating = true;
+    var div = $(".wrapper-4");
+    div.animate({height: '+=40%', opacity: '1'}, 500);
+    div.animate({height: '-=40%', opacity: '1'}, 600);
+    setTimeout(function(){
+      animating = false;
+    },6000);
   }
 });
 
-$(document).ready(function($){ //wait for the DOM to load
-    if($(window).width() < 640) { //check if screen width is less than 640px (i.e. mobile)
-        $('.toggle-image').css({ 'height' : $(window).height()});
-    }
-    console.log("beep");
-});
+// $(document).ready(function($){ //wait for the DOM to load
+//   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { //check if screen width is less than 640px (i.e. mobile)
+//     //updateScreen();
+//     window.onresize = function(){
+//       //updateScreen();
+//     }
+//     console.log("tjoho");
+//   }
+// });
