@@ -1,3 +1,4 @@
+// Function that cycle the backgrounds
 function cycleBackgrounds() {
   var index = 0;
 
@@ -19,25 +20,65 @@ $(function () {
   cycleBackgrounds();
 });
 
-var animating = false;
+var alreadyShowed = false;
 $(window).scroll(function() {
-  if(!animating && $(window).scrollTop() + $(window).height() > $(document).height() - 5) {
-    animating = true;
+  if(!alreadyShowed && $(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+    alreadyShowed = true;
     var div = $(".wrapper-4");
-    div.animate({height: '+=40%', opacity: '1'}, 500);
-    div.animate({height: '-=40%', opacity: '1'}, 600);
-    setTimeout(function(){
-      animating = false;
-    },6000);
+    var trans = '15%';
+    var speed = 400;
+    div.animate({height: '+=' + trans, opacity: '1'}, speed);
+    div.animate({height: '-=' + trans, opacity: '1'}, speed);
+    div.animate({height: '+=' + trans, opacity: '1'}, speed);
+    div.animate({height: '-=' + trans, opacity: '1'}, speed);
   }
 });
 
-// $(document).ready(function($){ //wait for the DOM to load
-//   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { //check if screen width is less than 640px (i.e. mobile)
-//     //updateScreen();
-//     window.onresize = function(){
-//       //updateScreen();
-//     }
-//     console.log("tjoho");
-//   }
-// });
+$(document).ready(function($){ //wait for the DOM to load
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    updateScreen();
+    window.onresize = function(){
+      updateScreen();
+    }
+  }
+});
+
+var updateScreen = function(){
+  var size = $(window).height();
+
+  if(window.innerWidth > window.innerHeight){
+    // LANDSCAPE
+    $('.toggle-image').css({ 'height' : size});
+    $('#title-text').css({ 'margin-top' : '10%'});
+    $('#title-text').css({ 'font-size' : '7vmax'});
+    $('#signup-box *').css({ 'font-size' : '3.5vmax'});
+    $('#signup-box').css({ 'width' : '70vw'});
+    $('#logo').css({ 'width' : '20%'});
+    $('#mobile-screen').css({ 'max-width' : '100%'});
+    $('.section').css({ 'height' : size});
+    $('.section-2').css({ 'top' : size});
+    $('.section-2').css({ 'height' : 0.75 * size});
+    $('.section-3').css({ 'top' : 1.75 * size});
+    $('.section-3').css({ 'height' : size});
+    $('.section-4').css({ 'top' : 2.75 * size});
+    $('.section-4').css({ 'height' : 0.6 * size});
+    $('.wrapper-4 img').css({ 'max-height' : '60%'});
+  } else {
+    // PORTRAIT
+    $('.toggle-image').css({ 'height' : size});
+    $('#logo').css({ 'width' : '50%'});
+    $('#title-text').css({ 'margin-top' : '40%'});
+    $('#title-text').css({ 'font-size' : '7vmax'});
+    $('#signup-box *').css({ 'font-size' : '3.5vmax'});
+    $('#signup-box').css({ 'width' : '80vw'});
+    $('#mobile-screen').css({ 'max-width' : '95%'});
+    $('.section').css({ 'height' : size});
+    $('.section-2').css({ 'top' : size});
+    $('.section-2').css({ 'height' : 0.5 * size});
+    $('.section-3').css({ 'top' : 1.5 * size});
+    $('.section-3').css({ 'height' : size});
+    $('.section-4').css({ 'top' : 2.5 * size});
+    $('.section-4').css({ 'height' : 0.3 * size});
+    $('.wrapper-4 img').css({ 'max-height' : '50%'});
+  }
+}

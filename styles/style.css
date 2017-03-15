@@ -10,7 +10,6 @@ body * {
   font-size: 2vmax;
 }
 
-
 .section {
   position: absolute;
   height: 100vh;
@@ -39,7 +38,6 @@ body * {
   transform: translateY(-50%);
 }
 
-
 /* Section 1 */
 #title-text {
   color:white;
@@ -51,6 +49,47 @@ body * {
   width: 20%;
   bottom: 0px;
   transform: translateX(-50%);
+}
+#signup-box {
+  position: absolute;
+  padding: 1.2vmax;
+  margin-top: 2vmax;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 20vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1vmax;
+}
+.signup-p {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin-bottom: 1vmax;
+}
+.email-input {
+  width: 70%;
+  text-align: left;
+}
+.button-input {
+  width: 20%;
+  text-align: center;
+}
+#signup-box * {
+  color:rgba(255,255,255,0.8);
+  font-size: 1vmax;
+}
+#signup-box p {
+  text-align: left;
+  font-size: 1.5vmax;
+}
+#signup-box input {
+  border: 0.1vmax;
+  padding: 0.5vmax;
+  background-color: transparent;
+  border-color: white;
+  border-style: solid;
+  border-radius: 1.2vmax;
 }
 
 
@@ -108,8 +147,8 @@ body * {
 .solution-wrapper img {
   height: auto;
   width: auto;
-  max-width: 40%;
-  max-height: 40%;
+  max-width: 35%;
+  max-height: 35%;
   opacity: 0.6;
 }
 .section-3 .filler {
@@ -127,8 +166,8 @@ body * {
   width: auto;
   max-width: 90%;
   max-height: 90%;
-
 }
+
 #section-3-content-wrapper {
   display: inline-block;
   width:100%;
@@ -149,12 +188,17 @@ body * {
   width: auto;
   margin-top: 1%;
   max-height: 55%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+#social-media-text {
+  font-size: 3vmax;
 }
 .contact-mail {
   position: absolute;
   transform: translateX(-50%);
-  color:red;
-  bottom: 1%;
+  bottom: 8%;
+  text-decoration: none;
 }
 
 /* Styles for the alternating / transition effect. */
@@ -197,4 +241,23 @@ body * {
 }
 .third-image.show {
 	opacity: 1;
+}
+
+/*
+PLACEHOLDER
+*/
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
 }
