@@ -52,39 +52,32 @@ body * {
 }
 #signup-box {
   position: absolute;
-  padding: 1.2vmax;
-  margin-top: 2vmax;
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 20vw;
+  width: 30vw;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 1vmax;
-}
-.signup-p {
-  width: 100%;
-  height: auto;
-  text-align: left;
-  margin-bottom: 1vmax;
+  min-width: 200px;
+  text-align: center;
 }
 .email-input {
   width: 70%;
   text-align: left;
 }
 .button-input {
-  width: 20%;
+  width: auto;
   text-align: center;
 }
 #signup-box * {
-  color:rgba(255,255,255,0.8);
+  color: white;
   font-size: 1vmax;
 }
 #signup-box p {
-  text-align: left;
+  text-align: center;
   font-size: 1.5vmax;
+  margin-bottom: 1vmax;
 }
 #signup-box input {
-  border: 0.1vmax;
+  border: 0.2vmax;
   padding: 0.5vmax;
   background-color: transparent;
   border-color: white;

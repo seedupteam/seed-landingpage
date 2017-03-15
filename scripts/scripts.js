@@ -20,6 +20,7 @@ $(function () {
   cycleBackgrounds();
 });
 
+
 var alreadyShowed = false;
 $(window).scroll(function() {
   if(!alreadyShowed && $(window).scrollTop() + $(window).height() > $(document).height() - 50) {
