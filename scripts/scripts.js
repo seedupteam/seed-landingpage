@@ -25,7 +25,7 @@ var alreadyShowed = false;
 $(window).scroll(function() {
   if(!alreadyShowed && $(window).scrollTop() + $(window).height() > $(document).height() - 50) {
     alreadyShowed = true;
-    var div = $(".wrapper-4");
+    var div = $(".wrapper-social");
     var trans = '15%';
     var speed = 400;
     div.animate({height: '+=' + trans, opacity: '1'}, speed);
@@ -57,13 +57,13 @@ var updateScreen = function(){
     $('#logo').css({ 'width' : '20%'});
     $('#mobile-screen').css({ 'max-width' : '100%'});
     $('.section').css({ 'height' : size});
-    $('.section-2').css({ 'top' : size});
-    $('.section-2').css({ 'height' : 0.75 * size});
-    $('.section-3').css({ 'top' : 1.75 * size});
-    $('.section-3').css({ 'height' : size});
-    $('.section-4').css({ 'top' : 2.75 * size});
-    $('.section-4').css({ 'height' : 0.6 * size});
-    $('.wrapper-4 img').css({ 'max-height' : '60%'});
+    $('.section-facts').css({ 'top' : size});
+    $('.section-facts').css({ 'height' : 0.75 * size});
+    $('.section-mobile').css({ 'top' : 1.75 * size});
+    $('.section-mobile').css({ 'height' : size});
+    $('.section-social').css({ 'top' : 2.75 * size});
+    $('.section-social').css({ 'height' : 0.6 * size});
+    $('.wrapper-social img').css({ 'max-height' : '60%'});
   } else {
     // PORTRAIT
     $('.toggle-image').css({ 'height' : size});
@@ -74,12 +74,12 @@ var updateScreen = function(){
     $('#signup-box').css({ 'width' : '80vw'});
     $('#mobile-screen').css({ 'max-width' : '95%'});
     $('.section').css({ 'height' : size});
-    $('.section-2').css({ 'top' : size});
-    $('.section-2').css({ 'height' : 0.5 * size});
-    $('.section-3').css({ 'top' : 1.5 * size});
-    $('.section-3').css({ 'height' : size});
-    $('.section-4').css({ 'top' : 2.5 * size});
-    $('.section-4').css({ 'height' : 0.3 * size});
-    $('.wrapper-4 img').css({ 'max-height' : '50%'});
+    $('.section-facts').css({ 'top' : size});
+    $('.section-facts').css({ 'height' : 0.5 * size});
+    $('.section-mobile').css({ 'top' : 1.5 * size});
+    $('.section-mobile').css({ 'height' : size});
+    $('.section-social').css({ 'top' : 2.5 * size});
+    $('.section-social').css({ 'height' : 0.3 * size});
+    $('.wrapper-social img').css({ 'max-height' : '50%'});
   }
 }
