@@ -49,37 +49,11 @@ var updateScreen = function(){
 
   if(window.innerWidth > window.innerHeight){
     // LANDSCAPE
+    $('.full').css({ 'height' : size});
     $('.toggle-image').css({ 'height' : size});
-    $('#title-text').css({ 'margin-top' : '10%'});
-    $('#title-text').css({ 'font-size' : '7vmax'});
-    $('#signup-box *').css({ 'font-size' : '3.5vmax'});
-    $('#signup-box').css({ 'width' : '70vw'});
-    $('#logo').css({ 'width' : '20%'});
-    $('#mobile-screen').css({ 'max-width' : '100%'});
-    $('.section').css({ 'height' : size});
-    $('.section-facts').css({ 'top' : size});
-    $('.section-facts').css({ 'height' : 0.75 * size});
-    $('.section-mobile').css({ 'top' : 1.75 * size});
-    $('.section-mobile').css({ 'height' : size});
-    $('.section-social').css({ 'top' : 2.75 * size});
-    $('.section-social').css({ 'height' : 0.6 * size});
-    $('.wrapper-social img').css({ 'max-height' : '60%'});
   } else {
     // PORTRAIT
+    $('.full').css({ 'height' : size});
     $('.toggle-image').css({ 'height' : size});
-    $('#logo').css({ 'width' : '50%'});
-    $('#title-text').css({ 'margin-top' : '40%'});
-    $('#title-text').css({ 'font-size' : '7vmax'});
-    $('#signup-box *').css({ 'font-size' : '3.5vmax'});
-    $('#signup-box').css({ 'width' : '80vw'});
-    $('#mobile-screen').css({ 'max-width' : '95%'});
-    $('.section').css({ 'height' : size});
-    $('.section-facts').css({ 'top' : size});
-    $('.section-facts').css({ 'height' : 0.5 * size});
-    $('.section-mobile').css({ 'top' : 1.5 * size});
-    $('.section-mobile').css({ 'height' : size});
-    $('.section-social').css({ 'top' : 2.5 * size});
-    $('.section-social').css({ 'height' : 0.3 * size});
-    $('.wrapper-social img').css({ 'max-height' : '50%'});
   }
 }
